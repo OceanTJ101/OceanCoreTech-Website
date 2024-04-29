@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #007991, #78ffd6); /* Ocean gradient */
+    color: white;
+    text-align: center;
+}
+header {
+    padding: 20px;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.1);
+}
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.product-image {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-right: 50px;
+}
+.product-details {
+    max-width: 500px;
+    text-align: left;
+}
+.product-title {
+    font-size: 28px;
+    color: #f0f0f0;
+}
+.product-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #dddddd;
+}
+.buy-button {
+    padding: 10px 30px;
+    font-size: 18px;
+    background-color: #0088a9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+}
+.buy-button:hover {
+    background-color: #005f6b;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+    color: #FFF;
+}
+.navbar {
+    background-color: #005f73;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+.container {
+    width: 80%;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+button {
+    background-color: #0096c7;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #0077b6;
+}
+h1 {
+    text-align: center;
+}
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: %; /* Adjust width as necessary */
+}

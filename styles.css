@@ -1,0 +1,385 @@
+.buy-button {
+    padding: 10px 20px; /* Button padding for better touch area and visual */
+    font-size: 18px; /* Suitable font size for readability */
+    color: #FFFFFF; /* White text for contrast */
+    background: #0077b6; /* Ocean blue background */
+    border: none; /* No border for a modern look */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover for better UX */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for feedback */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
+}
+
+/* Hover effect to give feedback to the user */
+.buy-button:hover {
+    background: #0096c7; /* Slightly lighter blue when hovered */
+    transform: translateY(-2px); /* Small lift effect on hover */
+}
+
+/* Active state to simulate button press */
+.buy-button:active {
+    background: #023e8a; /* Darker blue when active */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Less shadow to simulate pressing */
+}
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+body {
+  margin:10;
+}
+
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+
+/* Animation */
+
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% {
+    transform: translate3d(85px,0,0);
+  }
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #4158d0;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+  color: #4158d0;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  color: #202020;
+}
+
+<style>
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color: #333;
+        color: #000000;
+        transition: background-color 0.3s ease; /* Animation duration */
+    }
+
+
+    .navbar a {
+        text-decoration: none;
+        color: inherit;
+        padding: 10px;
+    }
+
+
+    .navbar a:hover {
+      background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    }
+#title{
+    font-size: 45px;
+}
+</style>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #2F80ED, #56CCF2); /* This can be the same gradient as your header */
+  height: 100vh; /* Full height */
+}
+.navbar {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.navbar .container-fluid {
+  padding: 0;
+}
+.navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+.nav-item {
+  padding: 10px 20px;
+}
+.nav-link {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+.nav-link:hover, .nav-link:focus {
+  color: #a9ecf1; /* Lighter blue on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly highlight the background on hover */
+  border-radius: 5px; /* Rounded corners for hover effect */
+  text-decoration: none;
+  
+}
+
+ 
+}
+@media (max-width: 768px) {
+  #title {
+      font-size: 3em; /* Smaller font size for mobile */
+      line-height: 1.3; /* Slightly tighter line spacing */
+      text-align: center; /* Center alignment for better mobile aesthetics */
+  }
+}
+.nav-item {
+  text-decoration: none;
+  color: black; /* Default text color */
+  padding: 10px; /* Spacing around text */
+  display: inline-block;
+}
+
+
+.nav-item:hover {
+  background-color: #f4f4f4; /* Hover background color */
+
+
+}
+.active {
+  color: rgb(255, 255, 255); /* Active link text color */
+  background-color: #ffffff; /* Active link background color */
+}
+.nav-item {
+    text-decoration: none;
+    color: black; /* Default text color */
+    padding: 10px 20px; /* Spacing around text */
+    display: inline-block;
+    border-radius: 10px; /* Applies rounded corners to all links (optional) */
+}
+
+
+.nav-item:hover {
+    background-color: #f4f4f4; /* Hover background color */
+}
+.active{
+  background: linear-gradient(60deg, rgb(0, 174, 255) 0%, rgba(0,172,193,1) 100%);
+}
+.welcome {
+  color: black; 
+}
+.highlight{
+  background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+  border-radius: 10px; /* Applies rounded corners to all links (optional) */
+}
+.image-container {
+  width: 300px; /* Set the width of the container to your preference */
+  height: 200px; /* Set the height of the container */
+  overflow: hidden; /* Ensures no overflow of content */
+  position: relative; /* Required for correct positioning of the image */
+  
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Transition effect for transform and opacity */
+}
+
+.image-container:hover img {
+  transform: scale(1.1); /* Scales up the image */
+  opacity: 0.7; /* Changes the opacity */
+}
+.footer ul {
+  padding: 0;
+}
+
+.footer ul li {
+  list-style-type: none; /* Removes default list styling */
+  margin: 10px 0; /* Vertical spacing between items */
+}
+
+.footer a {
+  color: rgb(0, 140, 255); /* White text links */
+  text-decoration: none; /* No underline */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover for better visibility */
+}
+
+.footer i {
+  margin-right: 8px; /* Space between icon and text */
+}
+.high {
+background-color: #0084ff;
+}
+.bruh {
+
+  height: auto;
+
+  max-width: 5%;
+
+}
+
+
+
+
+
